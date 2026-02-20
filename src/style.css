@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-zinc-900 antialiased font-sans;
+  }
+}
+
+.game-card {
+  @apply relative bg-white rounded-2xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col opacity-0 pointer-events-none transition-opacity duration-300;
+}
+
+.modal-overlay.active {
+  @apply opacity-100 pointer-events-auto;
+}
